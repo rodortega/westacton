@@ -41,11 +41,7 @@ CREATE TABLE IF NOT EXISTS `sales` (
   `product_id` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
   `price` decimal(20,2) NOT NULL DEFAULT 0.00,
-  PRIMARY KEY (`id`),
-  KEY `FK_sales_products` (`product_id`),
-  KEY `FK_sales_transactions` (`transaction_id`),
-  CONSTRAINT `FK_sales_products` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
-  CONSTRAINT `FK_sales_transactions` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
 
 -- Dumping data for table westacton.sales: ~0 rows (approximately)
